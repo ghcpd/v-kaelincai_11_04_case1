@@ -1,4 +1,0 @@
-Total Time: 1.3306s
-Average Time: 266.12ms
-Tests Passed: 2/5
-Success Rate: 40.0%

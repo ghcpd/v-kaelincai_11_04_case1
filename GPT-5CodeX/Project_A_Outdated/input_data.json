@@ -1,0 +1,30 @@
+[
+  {
+    "endpoint": "/v1/user",
+    "payload": {
+      "user_id": "user-001",
+      "token": "valid-basic-token",
+      "include_preferences": true
+    }
+  },
+  {
+    "endpoint": "/v1/user",
+    "payload": {
+      "user_id": "user-999",
+      "token": "valid-basic-token",
+      "include_preferences": false
+    }
+  },
+  {
+    "endpoint": "/v1/user",
+    "payload": {
+      "token": "valid-basic-token"
+    }
+  },
+  {
+    "endpoint": "/v2/profile",
+    "payload": {
+      "user_id": "user-001"
+    }
+  }
+]

@@ -1,0 +1,7 @@
+LEGACY API TEST RUN
+schema_mismatch: missing profile envelope for TC01
+security_gap: token not validated for TC03
+routing_issue: TC04 returned legacy-404 instead of redirect
+security_gap: TC05 invalid token accepted by legacy endpoint
+performance_gap: TC02 history not trimmed, risking memory pressure
+latency_warning: TC02 handled in 34.12 ms
