@@ -1,6 +1,0 @@
-[
-  {"user_id": "1001", "token": "token_v1"},
-  {"user_id": "1002", "token": "token_v1"},
-  {"user_id": "1003", "token": "token_v1"},
-  {"user_id": "1001", "token": "expired_token"}
-]

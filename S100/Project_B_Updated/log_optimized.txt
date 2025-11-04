@@ -1,7 +1,0 @@
-Updated API verification log
-schema_alignment=pass
-legacy_contract_supported=1
-unauthorized_error=1
-not_found=1
-shared_cases_success=4
---- end session ---
