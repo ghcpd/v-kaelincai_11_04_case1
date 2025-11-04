@@ -1,0 +1,8 @@
+Updated API latency metrics
+Latency Metrics (/v2)
+Metric | Seconds
+------------------
+avg   | 0.0037
+min   | 0.0000
+max   | 0.0059
+avg=0.0037,min=0.0000,max=0.0059

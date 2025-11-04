@@ -1,0 +1,6 @@
+Legacy API diagnostic log
+schema_mismatch_missing=['activity', 'contact', 'membership', 'user']
+invalid_token_detected=1
+nested_payload_flattened=1
+shared_problematic_cases=5
+--- end session ---

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "standard_v2_profile",
+    "input": {"user_id": "1001", "token": "token_v2", "include_history": true},
+    "expected_status": 200,
+    "expected_output": {
+      "user": {"id": 1001, "tier": "platinum"},
+      "contact": {"email": "alicia@example.com"}
+    },
+    "expected_outcome": "pass"
+  },
+  {
+    "name": "legacy_format_still_valid",
+    "input": {"user_id": "1002", "token": "token_v1"},
+    "expected_status": 200,
+    "expected_output": {
+      "user": {"id": 1002, "tier": "gold"},
+      "contact": {"email": "bruno@example.com"}
+    },
+    "expected_outcome": "pass"
+  },
+  {
+    "name": "boundary_deep_payload",
+    "input": {
+      "user_id": "1001",
+      "token": "token_v2",
+      "include_history": true,
+      "payload": {
+        "profile": {"locale": "en-US", "tags": ["loyal", "beta"], "nested": {"depth": 6}},
+        "pagination": {"cursor": "ZXhhbXBsZQ==", "limit": 200}
+      }
+    },
+    "expected_status": 200,
+    "expected_output": {
+      "activity": {"session_count": 2}
+    },
+    "expected_outcome": "pass"
+  },
+  {
+    "name": "invalid_token_rejected",
+    "input": {"user_id": "1001", "token": "tampered"},
+    "expected_status": 401,
+    "expected_output": {"error": "Token rejected"},
+    "expected_outcome": "fail"
+  },
+  {
+    "name": "unknown_user",
+    "input": {"user_id": "9999", "token": "token_v2"},
+    "expected_status": 404,
+    "expected_output": {"error": "User not found"},
+    "expected_outcome": "fail"
+  },
+  {
+    "name": "mixed_schema_redirect",
+    "input": {
+      "user_id": "1001",
+      "token": "token_migration",
+      "legacy_payload": {"name": "Alicia Keys"},
+      "profile": {"user": {"id": 1001, "name": "Alicia Keys"}}
+    },
+    "expected_status": 200,
+    "expected_output": {
+      "user": {"id": 1001},
+      "contact": {"email": "alicia@example.com"}
+    },
+    "expected_outcome": "pass"
+  }
+]

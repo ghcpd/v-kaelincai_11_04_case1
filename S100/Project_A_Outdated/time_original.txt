@@ -1,0 +1,2 @@
+Legacy API latency metrics
+avg=0.0227,min=0.0000,max=0.0455
