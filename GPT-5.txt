@@ -1,0 +1,510 @@
+CCJJLL630: Role
+You are a software engineer responsible for implementing and testing the capabilities of AI models on the API change subtype within the Feature & improvement category.
+Your task is to provide two separate, complete Python projects:
+1.	Project A – Pre-Change (Outdated Implementation)
+A project that contains the original, outdated, or deprecated API implementation, demonstrating issues such as schema mismatches, obsolete endpoints, or inefficient error handling.
+2.	Project B – Post-Change (Updated Implementation)
+A project that contains the updated, refactored, and improved API implementation addressing all issues identified in Project A, ensuring correctness, compatibility, and efficiency.
+Each project must include its own code, environment setup, test cases, and execution scripts.
+You must ensure that all files are generated, stored locally, and fully reproducible.
+Both projects should handle optimizations, edge cases, and correctness verification while providing measurable improvements in API response consistency, stability, and performance.
+________________________________________
+Title
+Evaluation of GPT-5-Codex, GPT-5, Claude Sonnet 4.5, S100, and S40 on Feature & Improvement – API Change Implementation and Validation
+________________________________________
+Description
+This experiment evaluates AI models’ ability to perform API change tasks — specifically identifying, refactoring, and validating updates between deprecated and new API versions.
+The focus is on correctness, backward compatibility, performance improvement, and robustness when handling schema mismatches, outdated endpoints, or evolving data structures.
+________________________________________
+Key Evaluation Criteria
+•	Correctness of both pre- and post-change implementations
+•	Efficiency and optimization of updated solutions (latency, throughput, memory usage)
+•	Handling of malformed inputs, hidden vulnerabilities, non-string inputs, and complex nested API responses
+•	Comprehensive automated test coverage ensuring consistent behavior across endpoints
+•	Fully reproducible setup with one-click testing
+•	Quantitative comparison of API stability, correctness, and performance improvements
+________________________________________
+Requirements for the AI Model Output
+1. Test Scenario & Description
+Clearly describe the API change scenario being tested.
+Specify:
+•	The old and new API endpoints (e.g., /v1/user → /v2/profile)
+•	The differences in schema or response structure
+•	Expected input and output formats (preferably JSON)
+•	The intended improvement (e.g., unified schema, improved response time, enhanced error handling)
+________________________________________
+2. Project A – Pre-Change (Outdated Implementation)
+Generate a complete project folder named “Project_A_Outdated” containing:
+•	original_api.py – The outdated implementation using deprecated endpoints or mismatched schemas.
+•	requirements_original.txt – Environment setup file for dependencies.
+•	setup_original.sh – Script to initialize environment.
+•	input_data.json – Sample API requests for baseline testing.
+•	test_original.py – Automated tests that expose deprecated behaviors and failed responses.
+•	run_original.sh – Execution script for running tests and saving logs.
+•	log_original.txt – Log file capturing failed API calls and schema mismatches.
+•	time_original.txt – Performance and latency metrics for the outdated version.
+________________________________________
+3. Project B – Post-Change (Updated Implementation)
+Generate a complete project folder named “Project_B_Updated” containing:
+•	updated_api.py – The improved implementation with corrected endpoints, updated schemas, and optimized logic.
+•	requirements_optimized.txt – Environment setup file.
+•	setup_optimized.sh – Script to initialize environment for updated API.
+•	test_optimized.py – Automated tests validating the corrected behavior, new schema, and improved performance.
+•	run_optimized.sh – Execution script to run all tests and collect results.
+•	log_optimized.txt – Log file recording successful and failed API responses.
+•	time_optimized.txt – Performance and latency metrics for the updated version.
+________________________________________
+4. Test Data Generation
+Generate at least five structured test cases saved in test_data.json, covering:
+•	Normal cases – Correctly formatted API requests with valid tokens and data.
+•	Boundary cases – Large payloads, deeply nested JSON, and pagination edge conditions.
+•	Invalid/malformed inputs – Missing headers, broken schemas, or invalid tokens.
+•	Compatibility checks – Mixed old/new data formats and endpoint redirects.
+Each test must define:
+•	Input payload
+•	Expected output (JSON)
+•	Expected response status (e.g., 200, 400, 404)
+•	Expected outcome (pass/fail)
+________________________________________
+5. Comparison and Reporting
+After both projects have been executed, generate a summary report (compare_report.md) including:
+•	Side-by-side results comparison (before vs. after)
+•	Table of success rate, latency, and edge-case handling
+•	Schema and response diffs
+•	Description of improvements in endpoint consistency and performance
+•	Observations on backward compatibility and reliability
+________________________________________
+6. Reproducible Environment
+Both projects must include:
+•	Their own environment setup (requirements.txt or Dockerfile)
+•	Setup scripts (setup_original.sh, setup_optimized.sh)
+•	Instructions for installing dependencies, setting API keys, or configuring test data
+________________________________________
+7. Execution Scripts
+Each project must include a one-click execution script (run_original.sh and run_optimized.sh) that performs:
+•	Environment setup
+•	Running of test cases
+•	Saving of logs and performance reports
+Additionally, a master script (run_all.sh) must be generated at the root level to:
+•	Execute both projects sequentially
+•	Aggregate results
+•	Produce the final compare_report.md
+________________________________________
+8. Expected Output
+The model must output all required files for both Project A and Project B, including:
+•	API implementation code
+•	Test cases
+•	Logs and metrics
+•	Setup scripts
+•	Comparison report
+________________________________________
+9. Documentation
+Generate a README.md file at the root level explaining:
+•	The purpose of each project
+•	The API change being tested and how it was implemented
+•	Instructions to run each project individually and combined
+•	Environment setup and reproducibility steps
+•	Limitations or known constraints (e.g., simulated API environment, no live network calls)
+________________________________________
+Deliverables (All must be saved as local files)
+Project A – Pre-Change (Outdated Implementation)
+•	input_data.json
+•	original_api.py
+•	requirements_original.txt
+•	setup_original.sh
+•	test_original.py
+•	run_original.sh
+•	log_original.txt
+•	time_original.txt
+Project B – Post-Change (Updated Implementation)
+•	updated_api.py
+•	requirements_optimized.txt
+•	setup_optimized.sh
+•	test_optimized.py
+•	run_optimized.sh
+•	log_optimized.txt
+•	time_optimized.txt
+Shared Deliverables
+•	test_data.json
+•	compare_report.md
+•	run_all.sh
+•	README.md
+
+
+
+GitHub Copilot: 
+
+CCJJLL630: Role
+You are a software engineer responsible for implementing and testing the capabilities of AI models on the API change subtype within the Feature & improvement category.
+Your task is to provide two separate, complete Python projects:
+1.	Project A – Pre-Change (Outdated Implementation)
+A project that contains the original, outdated, or deprecated API implementation, demonstrating issues such as schema mismatches, obsolete endpoints, or inefficient error handling.
+2.	Project B – Post-Change (Updated Implementation)
+A project that contains the updated, refactored, and improved API implementation addressing all issues identified in Project A, ensuring correctness, compatibility, and efficiency.
+Each project must include its own code, environment setup, test cases, and execution scripts.
+You must ensure that all files are generated, stored locally, and fully reproducible.
+Both projects should handle optimizations, edge cases, and correctness verification while providing measurable improvements in API response consistency, stability, and performance.
+________________________________________
+Title
+Evaluation of GPT-5-Codex, GPT-5, Claude Sonnet 4.5, S100, and S40 on Feature & Improvement – API Change Implementation and Validation
+________________________________________
+Description
+This experiment evaluates AI models’ ability to perform API change tasks — specifically identifying, refactoring, and validating updates between deprecated and new API versions.
+The focus is on correctness, backward compatibility, performance improvement, and robustness when handling schema mismatches, outdated endpoints, or evolving data structures.
+________________________________________
+Key Evaluation Criteria
+•	Correctness of both pre- and post-change implementations
+•	Efficiency and optimization of updated solutions (latency, throughput, memory usage)
+•	Handling of malformed inputs, hidden vulnerabilities, non-string inputs, and complex nested API responses
+•	Comprehensive automated test coverage ensuring consistent behavior across endpoints
+•	Fully reproducible setup with one-click testing
+•	Quantitative comparison of API stability, correctness, and performance improvements
+________________________________________
+Requirements for the AI Model Output
+1. Test Scenario & Description
+Clearly describe the API change scenario being tested.
+Specify:
+•	The old and new API endpoints (e.g., /v1/user → /v2/profile)
+•	The differences in schema or response structure
+•	Expected input and output formats (preferably JSON)
+•	The intended improvement (e.g., unified schema, improved response time, enhanced error handling)
+________________________________________
+2. Project A – Pre-Change (Outdated Implementation)
+Generate a complete project folder named “Project_A_Outdated” containing:
+•	original_api.py – The outdated implementation using deprecated endpoints or mismatched schemas.
+•	requirements_original.txt – Environment setup file for dependencies.
+•	setup_original.sh – Script to initialize environment.
+•	input_data.json – Sample API requests for baseline testing.
+•	test_original.py – Automated tests that expose deprecated behaviors and failed responses.
+•	run_original.sh – Execution script for running tests and saving logs.
+•	log_original.txt – Log file capturing failed API calls and schema mismatches.
+•	time_original.txt – Performance and latency metrics for the outdated version.
+________________________________________
+3. Project B – Post-Change (Updated Implementation)
+Generate a complete project folder named “Project_B_Updated” containing:
+•	updated_api.py – The improved implementation with corrected endpoints, updated schemas, and optimized logic.
+•	requirements_optimized.txt – Environment setup file.
+•	setup_optimized.sh – Script to initialize environment for updated API.
+•	test_optimized.py – Automated tests validating the corrected behavior, new schema, and improved performance.
+•	run_optimized.sh – Execution script to run all tests and collect results.
+•	log_optimized.txt – Log file recording successful and failed API responses.
+•	time_optimized.txt – Performance and latency metrics for the updated version.
+________________________________________
+4. Test Data Generation
+Generate at least five structured test cases saved in test_data.json, covering:
+•	Normal cases – Correctly formatted API requests with valid tokens and data.
+•	Boundary cases – Large payloads, deeply nested JSON, and pagination edge conditions.
+•	Invalid/malformed inputs – Missing headers, broken schemas, or invalid tokens.
+•	Compatibility checks – Mixed old/new data formats and endpoint redirects.
+Each test must define:
+•	Input payload
+•	Expected output (JSON)
+•	Expected response status (e.g., 200, 400, 404)
+•	Expected outcome (pass/fail)
+________________________________________
+5. Comparison and Reporting
+After both projects have been executed, generate a summary report (compare_report.md) including:
+•	Side-by-side results comparison (before vs. after)
+•	Table of success rate, latency, and edge-case handling
+•	Schema and response diffs
+•	Description of improvements in endpoint consistency and performance
+•	Observations on backward compatibility and reliability
+________________________________________
+6. Reproducible Environment
+Both projects must include:
+•	Their own environment setup (requirements.txt or Dockerfile)
+•	Setup scripts (setup_original.sh, setup_optimized.sh)
+•	Instructions for installing dependencies, setting API keys, or configuring test data
+________________________________________
+7. Execution Scripts
+Each project must include a one-click execution script (run_original.sh and run_optimized.sh) that performs:
+•	Environment setup
+•	Running of test cases
+•	Saving of logs and performance reports
+Additionally, a master script (run_all.sh) must be generated at the root level to:
+•	Execute both projects sequentially
+•	Aggregate results
+•	Produce the final compare_report.md
+________________________________________
+8. Expected Output
+The model must output all required files for both Project A and Project B, including:
+•	API implementation code
+•	Test cases
+•	Logs and metrics
+•	Setup scripts
+•	Comparison report
+________________________________________
+9. Documentation
+Generate a README.md file at the root level explaining:
+•	The purpose of each project
+•	The API change being tested and how it was implemented
+•	Instructions to run each project individually and combined
+•	Environment setup and reproducibility steps
+•	Limitations or known constraints (e.g., simulated API environment, no live network calls)
+________________________________________
+Deliverables (All must be saved as local files)
+Project A – Pre-Change (Outdated Implementation)
+•	input_data.json
+•	original_api.py
+•	requirements_original.txt
+•	setup_original.sh
+•	test_original.py
+•	run_original.sh
+•	log_original.txt
+•	time_original.txt
+Project B – Post-Change (Updated Implementation)
+•	updated_api.py
+•	requirements_optimized.txt
+•	setup_optimized.sh
+•	test_optimized.py
+•	run_optimized.sh
+•	log_optimized.txt
+•	time_optimized.txt
+Shared Deliverables
+•	test_data.json
+•	compare_report.md
+•	run_all.sh
+•	README.md
+
+
+GitHub Copilot: 
+
+CCJJLL630: Role
+You are a software engineer responsible for implementing and testing the capabilities of AI models on the API change subtype within the Feature & improvement category.
+Your task is to provide two separate, complete Python projects:
+1.	Project A – Pre-Change (Outdated Implementation)
+A project that contains the original, outdated, or deprecated API implementation, demonstrating issues such as schema mismatches, obsolete endpoints, or inefficient error handling.
+2.	Project B – Post-Change (Updated Implementation)
+A project that contains the updated, refactored, and improved API implementation addressing all issues identified in Project A, ensuring correctness, compatibility, and efficiency.
+Each project must include its own code, environment setup, test cases, and execution scripts.
+You must ensure that all files are generated, stored locally, and fully reproducible.
+Both projects should handle optimizations, edge cases, and correctness verification while providing measurable improvements in API response consistency, stability, and performance.
+________________________________________
+Title
+Evaluation of GPT-5-Codex, GPT-5, Claude Sonnet 4.5, S100, and S40 on Feature & Improvement – API Change Implementation and Validation
+________________________________________
+Description
+This experiment evaluates AI models’ ability to perform API change tasks — specifically identifying, refactoring, and validating updates between deprecated and new API versions.
+The focus is on correctness, backward compatibility, performance improvement, and robustness when handling schema mismatches, outdated endpoints, or evolving data structures.
+________________________________________
+Key Evaluation Criteria
+•	Correctness of both pre- and post-change implementations
+•	Efficiency and optimization of updated solutions (latency, throughput, memory usage)
+•	Handling of malformed inputs, hidden vulnerabilities, non-string inputs, and complex nested API responses
+•	Comprehensive automated test coverage ensuring consistent behavior across endpoints
+•	Fully reproducible setup with one-click testing
+•	Quantitative comparison of API stability, correctness, and performance improvements
+________________________________________
+Requirements for the AI Model Output
+1. Test Scenario & Description
+Clearly describe the API change scenario being tested.
+Specify:
+•	The old and new API endpoints (e.g., /v1/user → /v2/profile)
+•	The differences in schema or response structure
+•	Expected input and output formats (preferably JSON)
+•	The intended improvement (e.g., unified schema, improved response time, enhanced error handling)
+________________________________________
+2. Project A – Pre-Change (Outdated Implementation)
+Generate a complete project folder named “Project_A_Outdated” containing:
+•	original_api.py – The outdated implementation using deprecated endpoints or mismatched schemas.
+•	requirements_original.txt – Environment setup file for dependencies.
+•	setup_original.sh – Script to initialize environment.
+•	input_data.json – Sample API requests for baseline testing.
+•	test_original.py – Automated tests that expose deprecated behaviors and failed responses.
+•	run_original.sh – Execution script for running tests and saving logs.
+•	log_original.txt – Log file capturing failed API calls and schema mismatches.
+•	time_original.txt – Performance and latency metrics for the outdated version.
+________________________________________
+3. Project B – Post-Change (Updated Implementation)
+Generate a complete project folder named “Project_B_Updated” containing:
+•	updated_api.py – The improved implementation with corrected endpoints, updated schemas, and optimized logic.
+•	requirements_optimized.txt – Environment setup file.
+•	setup_optimized.sh – Script to initialize environment for updated API.
+•	test_optimized.py – Automated tests validating the corrected behavior, new schema, and improved performance.
+•	run_optimized.sh – Execution script to run all tests and collect results.
+•	log_optimized.txt – Log file recording successful and failed API responses.
+•	time_optimized.txt – Performance and latency metrics for the updated version.
+________________________________________
+4. Test Data Generation
+Generate at least five structured test cases saved in test_data.json, covering:
+•	Normal cases – Correctly formatted API requests with valid tokens and data.
+•	Boundary cases – Large payloads, deeply nested JSON, and pagination edge conditions.
+•	Invalid/malformed inputs – Missing headers, broken schemas, or invalid tokens.
+•	Compatibility checks – Mixed old/new data formats and endpoint redirects.
+Each test must define:
+•	Input payload
+•	Expected output (JSON)
+•	Expected response status (e.g., 200, 400, 404)
+•	Expected outcome (pass/fail)
+________________________________________
+5. Comparison and Reporting
+After both projects have been executed, generate a summary report (compare_report.md) including:
+•	Side-by-side results comparison (before vs. after)
+•	Table of success rate, latency, and edge-case handling
+•	Schema and response diffs
+•	Description of improvements in endpoint consistency and performance
+•	Observations on backward compatibility and reliability
+________________________________________
+6. Reproducible Environment
+Both projects must include:
+•	Their own environment setup (requirements.txt or Dockerfile)
+•	Setup scripts (setup_original.sh, setup_optimized.sh)
+•	Instructions for installing dependencies, setting API keys, or configuring test data
+________________________________________
+7. Execution Scripts
+Each project must include a one-click execution script (run_original.sh and run_optimized.sh) that performs:
+•	Environment setup
+•	Running of test cases
+•	Saving of logs and performance reports
+Additionally, a master script (run_all.sh) must be generated at the root level to:
+•	Execute both projects sequentially
+•	Aggregate results
+•	Produce the final compare_report.md
+________________________________________
+8. Expected Output
+The model must output all required files for both Project A and Project B, including:
+•	API implementation code
+•	Test cases
+•	Logs and metrics
+•	Setup scripts
+•	Comparison report
+________________________________________
+9. Documentation
+Generate a README.md file at the root level explaining:
+•	The purpose of each project
+•	The API change being tested and how it was implemented
+•	Instructions to run each project individually and combined
+•	Environment setup and reproducibility steps
+•	Limitations or known constraints (e.g., simulated API environment, no live network calls)
+________________________________________
+Deliverables (All must be saved as local files)
+Project A – Pre-Change (Outdated Implementation)
+•	input_data.json
+•	original_api.py
+•	requirements_original.txt
+•	setup_original.sh
+•	test_original.py
+•	run_original.sh
+•	log_original.txt
+•	time_original.txt
+Project B – Post-Change (Updated Implementation)
+•	updated_api.py
+•	requirements_optimized.txt
+•	setup_optimized.sh
+•	test_optimized.py
+•	run_optimized.sh
+•	log_optimized.txt
+•	time_optimized.txt
+Shared Deliverables
+•	test_data.json
+•	compare_report.md
+•	run_all.sh
+•	README.md
+我要求你尽可能快在十分钟内完成，一些不必要的动作和指令可以跳过，只需要你尽快输出结果和总结。
+
+GitHub Copilot: Planning tasks for scaffolding both projects and shared artifacts.
+
+Created 9 todos
+
+Creating project directories to begin scaffolding.
+
+Created [](file:///c%3A/chatWorkspace/Project_A_Outdated)
+
+Created [](file:///c%3A/chatWorkspace/Project_B_Updated)
+
+Starting: *Implement original API* (2/9)
+
+Implementing outdated API module with deprecated logic.
+
+Created [](file:///c%3A/chatWorkspace/Project_A_Outdated/original_api.py)
+
+Starting: *Implement updated API* (3/9)
+
+Adding updated API implementation with unified schema.
+
+Created [](file:///c%3A/chatWorkspace/Project_B_Updated/updated_api.py)
+
+Starting: *Add test data files* (4/9)
+
+Adding test and input data files.
+
+Created [](file:///c%3A/chatWorkspace/Project_A_Outdated/input_data.json)
+
+Created [](file:///c%3A/chatWorkspace/test_data.json)
+
+Starting: *Add test modules* (5/9)
+
+Creating test modules for both projects.
+
+Created [](file:///c%3A/chatWorkspace/Project_A_Outdated/test_original.py)
+
+Created [](file:///c%3A/chatWorkspace/Project_B_Updated/test_optimized.py)
+
+Starting: *Add setup & run scripts* (6/9)
+
+Adding setup and run scripts plus requirements files.
+
+Created [](file:///c%3A/chatWorkspace/Project_A_Outdated/requirements_original.txt)
+
+Created [](file:///c%3A/chatWorkspace/Project_B_Updated/requirements_optimized.txt)
+
+Created [](file:///c%3A/chatWorkspace/Project_A_Outdated/setup_original.sh)
+
+Created [](file:///c%3A/chatWorkspace/Project_B_Updated/setup_optimized.sh)
+
+Created [](file:///c%3A/chatWorkspace/Project_A_Outdated/run_original.sh)
+
+Created [](file:///c%3A/chatWorkspace/Project_B_Updated/run_optimized.sh)
+
+Starting: *Add comparison tooling* (7/9)
+
+Adding comparison tooling and master run script.
+
+Created [](file:///c%3A/chatWorkspace/compare_results.py)
+
+Created [](file:///c%3A/chatWorkspace/run_all.sh)
+
+Starting: *Add documentation* (8/9)
+
+Adding documentation and placeholder metric/log files.
+
+Created [](file:///c%3A/chatWorkspace/README.md)
+
+Continue to iterate?
+[object Object]
+
+Made changes.
+
+CCJJLL630: @agent Continue: "Continue to iterate?"
+
+GitHub Copilot: Created [](file:///c%3A/chatWorkspace/Project_A_Outdated/log_original.txt)
+
+Created [](file:///c%3A/chatWorkspace/Project_A_Outdated/time_original.txt)
+
+Created [](file:///c%3A/chatWorkspace/Project_B_Updated/log_optimized.txt)
+
+Created [](file:///c%3A/chatWorkspace/Project_B_Updated/time_optimized.txt)
+
+Created [](file:///c%3A/chatWorkspace/compare_report.md)
+
+Completed: *Add documentation* (8/9)
+
+**Outcome**  
+- All required files and directories have been generated (Project_A_Outdated and Project_B_Updated plus shared artifacts).  
+- Outdated vs updated API implementations created with intentional deficiencies vs improvements.  
+- Test data (test_data.json) includes 5 diverse cases (normal, legacy, missing auth, large nested, malformed).  
+- Pytest-based test modules added for both versions.  
+- Setup and run scripts support one-click execution plus timing + logging.  
+- Comparison tooling (compare_results.py, run_all.sh) ready; placeholder compare_report.md created.  
+- README documents scenario, differences, execution, reproducibility, limitations.
+
+**Next Steps (Optional)**  
+- Run full experiment:  
+```bash
+bash run_all.sh
+```  
+- Inspect generated compare_report.md for metrics after run.
+
+Let me know if you’d like expansion (e.g., add FastAPI server, more edge cases, Dockerization, or performance benchmarking).
+
+Made changes.
