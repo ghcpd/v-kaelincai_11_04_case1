@@ -1,7 +1,0 @@
-[
-  {"path": "/v1/user", "payload": {"id": 1, "name": "Alice", "email": "alice@example.com"}, "headers": {"Authorization": "token-123"}},
-  {"path": "/v1/user", "payload": {"id": 2, "name": "Bob"}, "headers": {"Authorization": "legacy-abc"}},
-  {"path": "/v1/user", "payload": {"id": 3, "name": "<script>alert('x')</script>Eve"}, "headers": {"Authorization": "token-123"}},
-  {"path": "/v1/user", "payload": {"id": 4, "name": "Mallory", "email": "m@ex", "nested": {"level": {"inner": {"deep": true}}}}, "headers": {"Authorization": "token-123"}},
-  {"path": "/v1/user", "payload": {"id": 5, "email": "no-name@example.com"}, "headers": {"Authorization": "token-123"}}
-]

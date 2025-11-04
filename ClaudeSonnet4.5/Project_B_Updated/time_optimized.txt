@@ -1,0 +1,5 @@
+Total Time: 0.5363s
+Average Time: 107.26ms
+Tests Passed: 4/5
+Success Rate: 80.0%
+Schema Valid: 5/5
