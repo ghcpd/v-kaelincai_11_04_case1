@@ -1,0 +1,134 @@
+以下是几个模型的评测，请你整理总结输出what the models did,rank,conclusion三个部分，rank只需排名，并将评估得分列在rank模型名称后，得分采用十分制。what the models did 需要分模型进行说明，列出各模型的Strength,Weakness，用英文。
+
+
+
+
+请你根据Feature & improvement下的Enhancement分类，帮我想一个具体场景。
+
+请你对下文进行整理总结，评估模型得分，并将得分列在rank模型名称后。
+
+
+Please execute a full validation of the completed project.
+Your tasks include:
+Run the entire project using the provided environment setup and execution scripts.
+Verify that the system launches successfully without errors.
+Execute all automated test cases and ensure they all pass.
+Capture the outputs, logs, and any error traces if failures occur.
+Confirm that the project meets the expected functionality and behaves consistently under all provided test scenarios.
+Summarize the runtime results and explicitly state whether all test cases passed.
+
+你现在的任务：对当前工作目录中的全部代码与文档进行系统化评估。请严格按照以下四个维度输出结果，并给出每一项的评分与解析。
+
+评估维度与说明：
+
+正确性与一致性（Correctness & Fidelity）
+判断代码/回答是否解决预期任务目标。预期任务目标通过prompt获取。
+是否能成功运行（若可运行：说明运行步骤与结果；若不能：指出阻塞因素）。
+是否存在逻辑错误、异常、回退(regression)迹象。
+完整性（Completeness）
+是否覆盖任务所有要求与子模块。
+有无残留 “TODO”、未实现接口、明显缺失的边界/异常处理。
+主要边界条件是否处理或至少被提及。
+流畅性与开发体验（Smoothness & Developer Experience）
+是否易于快速拉起（依赖、配置、启动流程是否清晰简单）。
+是否存在隐藏依赖或不合理的复杂步骤。
+日志/报错信息是否清晰，便于调试。
+文档与清晰度（Documentation & Clarity）
+是否存在清晰的 README / 使用说明 / 安装步骤。
+代码结构与命名是否自解释，可读性如何。
+关键模块是否有必要的注释或解释。
+评分标准：
+
+每个维度请给出一个 0–10 分的整数或带一位小数的评分（10 = 极佳，0 = 严重缺失）。
+
+必须产出内容：
+A. 总览摘要（1–3 句话，概括整体质量与主要优劣）
+B. 四个维度的详细分析：
+
+分数: <数字>
+证据: 引用具体文件/函数/片段（若适用，列出路径或函数名）
+原因：为什么是这个分数？为什么要扣分，扣分的点在哪里，加分的点在哪里
+C. 可运行性验证：
+如果能运行：列出最短运行命令（含依赖安装）及实际/预期输出。
+如果不能：列出阻塞点。
+
+执行方式指引（供你评估时参考）：
+先列出项目结构（目录与关键文件）。
+检查依赖/环境文件（如 package.json / requirements.txt / pyproject.toml 等）。
+查找明显的 TODO / FIXME / 未实现函数。
+判断入口（如 main.、app.、index.*、CLI、服务启动脚本）。
+若可执行，尝试推导最短启动命令；若缺失，说明所需最少补齐项。
+提供基于证据的客观分析，避免泛泛而谈。
+并且需要你运行启动命令，根据prompt的内容进行功能验证。
+测试已完成的项目，确认其是否可运行，测试用例是否可通过。若不通过，列出原因，并计入评分。
+
+约束：
+不要臆造不存在的文件或输出。
+若信息不足，明确标注“信息不足”并给出获取该信息的建议。
+尽量引用具体文件路径或函数名以增强可信度。
+现在开始评估，并输出上述全部部分。
+
+Prompt
+
+You are an expert evaluator. I will provide you with several model evaluation results.
+Your task is to analyze the content and summarize the assessment into three sections:
+
+1. What the models did
+
+For each model, produce a subsection containing:
+
+Strengths (clearly list what the model did well; focus on correctness, robustness, UX quality, handling edge cases, clarity of output, image optimization quality, etc.)
+
+Weaknesses (list concrete issues, errors, missing features, failures, performance gaps, reasoning issues, or UX defects)
+
+Use concise, professional English.
+
+Format:
+
+Model Name
+Strengths:
+• …
+• …
+Weaknesses:
+• …
+• …
+
+2. Rank
+
+Rank all models strictly from best to worst, based on the evaluation results.
+For each model, show:
+
+Rank. Model Name — Score (x/10)
+
+The score uses a 10-point scale.
+Use only the scores extracted from the evaluation results.
+
+3. Conclusion
+
+Write a concise analytical conclusion summarizing:
+
+Overall model performance patterns
+
+Key differences between strong and weak models
+
+Why the top model(s) performed better
+
+What the lower-ranked models failed to achieve
+
+General insights about model capabilities on this task
+
+Use professional English.
+
+Important
+
+Do not fabricate information. Only summarize from the evaluation content I provide.
+
+Be objective and avoid emotional language.
+
+Structure the final output cleanly .
+
+
+
+
+
+

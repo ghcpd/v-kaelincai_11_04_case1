@@ -1,0 +1,108 @@
+[
+  {
+    "id": "TC01",
+    "description": "Baseline profile request with valid token",
+    "endpoint": "/v2/profile",
+    "input_payload": {
+      "token": "valid-basic-token",
+      "user_id": "user-001",
+      "include_preferences": true
+    },
+    "expected_status": 200,
+    "expected_output": {
+      "profile": {
+        "user_id": "user-001",
+        "name": "Legacy User",
+        "email": "legacy.user@example.com",
+        "preferences": {
+          "locale": "en-US",
+          "notifications": {
+            "email": true,
+            "sms": false
+          }
+        }
+      }
+    },
+    "expected_outcome": "pass"
+  },
+  {
+    "id": "TC02",
+    "description": "Large payload boundary check",
+    "endpoint": "/v2/profile",
+    "input_payload": {
+      "token": "valid-basic-token",
+      "user_id": "user-999",
+      "include_preferences": true,
+      "history": [
+        {"event": "login", "timestamp": "2025-11-04T08:00:00Z"},
+        {"event": "purchase", "timestamp": "2025-11-04T09:00:00Z", "amount": 199.99}
+      ],
+      "pagination": {
+        "cursor": null,
+        "page_size": 1000
+      }
+    },
+    "expected_status": 200,
+    "expected_output": {
+      "profile": {
+        "user_id": "user-999",
+        "name": "High Volume User",
+        "preferences": {
+          "locale": "en-GB",
+          "notifications": {
+            "email": false,
+            "sms": true
+          }
+        }
+      }
+    },
+    "expected_outcome": "pass"
+  },
+  {
+    "id": "TC03",
+    "description": "Malformed payload misses token",
+    "endpoint": "/v2/profile",
+    "input_payload": {
+      "user_id": "user-001"
+    },
+    "expected_status": 400,
+    "expected_output": {
+      "error": {
+        "code": "MISSING_TOKEN",
+        "message": "Authentication token is required"
+      }
+    },
+    "expected_outcome": "pass"
+  },
+  {
+    "id": "TC04",
+    "description": "Compatibility routing to old endpoint",
+    "endpoint": "/v1/user",
+    "input_payload": {
+      "token": "valid-basic-token",
+      "user_id": "user-001"
+    },
+    "expected_status": 301,
+    "expected_output": {
+      "redirect": "/v2/profile"
+    },
+    "expected_outcome": "pass"
+  },
+  {
+    "id": "TC05",
+    "description": "Invalid token should be rejected",
+    "endpoint": "/v2/profile",
+    "input_payload": {
+      "token": "invalid-token",
+      "user_id": "user-001"
+    },
+    "expected_status": 401,
+    "expected_output": {
+      "error": {
+        "code": "INVALID_TOKEN",
+        "message": "Provided token is invalid"
+      }
+    },
+    "expected_outcome": "pass"
+  }
+]

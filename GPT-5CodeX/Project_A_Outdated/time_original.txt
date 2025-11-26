@@ -1,0 +1,2 @@
+total_duration_ms=182.45
+notes=Includes synthetic delay from legacy handler and pytest overhead.

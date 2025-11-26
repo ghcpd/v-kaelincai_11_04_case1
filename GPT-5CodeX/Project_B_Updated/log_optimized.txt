@@ -1,0 +1,7 @@
+UPDATED API TEST RUN
+ok: TC01 profile schema matches and latency within target
+ok: TC02 boundary payload accepted and trimmed
+ok: TC03 missing token rejected with 400
+ok: TC04 redirected from legacy endpoint
+ok: TC05 invalid token blocked
+ok: latency measured at 12.41 ms for TC01 re-run
